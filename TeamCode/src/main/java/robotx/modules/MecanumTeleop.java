@@ -66,7 +66,6 @@ public final class MecanumTeleop extends XModule{
 
     public boolean slowMode = false;
 
-
     public MecanumTeleop(OpMode op){
         super(op);
     }
