@@ -5,15 +5,15 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import robotx.libraries.XOpMode;
 import robotx.modules.GolfMotorServo;
 import robotx.modules.MecanumTeleop;
-import robotx.modules.OrientationDrive;
+import robotx.modules.MecanumDrive;
 
 @TeleOp(name = "GolfBotOpMode", group = "Default")
 
 public class OpMode2021v2 extends XOpMode {
 
-    OrientationDrive orientationDrive;
     GolfMotorServo golfMotorServo;
     MecanumTeleop mecanumTeleop;
+    MecanumDrive mecanumDrive;
 
     public void initModules() {                                                                 
 
@@ -25,8 +25,9 @@ public class OpMode2021v2 extends XOpMode {
         mecanumTeleop = new MecanumTeleop(this);
         activeModules.add(mecanumTeleop);
 
-        orientationDrive = new OrientationDrive(this);
-        activeModules.add(orientationDrive);
+
+        mecanumDrive = new MecanumDrive(this);
+        activeModules.add(mecanumDrive);
 
     }
 
